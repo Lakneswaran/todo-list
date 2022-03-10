@@ -10,6 +10,7 @@ function App() {
     setTodoName(e.target.value);
   }
   const addTodo = () => {
+    setList([...list, todoName]);
     console.log(todoName)
   };
   return (
