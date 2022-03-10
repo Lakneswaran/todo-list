@@ -10,9 +10,11 @@ function App() {
     setTodoName(e.target.value);
   }
   const addTodo = () => {
+    console.log(list)
+    if(todoName === "") return
     setList([...list,
       {
-        id: Math.floor((Math.random() * 10) + 1),
+        id: list.length < 1 ? 1 : list[list.length-1].id +1,
         name: todoName,
         completed: false
       }
@@ -20,10 +22,11 @@ function App() {
     setTodoName("");
   };
   // const rndNumber = (() => {
-  //   let num = Math.floor((Math.random() * 10) + 1);
+  //   let num = Math.floor((Math.random() * 5) + 1);
+
   //   return num;
-  //   console.log(num)
-  // },[addTodo]);
+  // });
+
   const onDone = (item) => {
     let newList = list.map(ListItem => {
       if (ListItem.id === item.id) {
