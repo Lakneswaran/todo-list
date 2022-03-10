@@ -12,15 +12,21 @@ function App() {
   const addTodo = () => {
     setList([...list,
       {
+        id: Math.floor((Math.random() * 10) + 1),
         name: todoName,
         completed: false
       }
     ]);
     setTodoName("");
   };
+  // const rndNumber = (() => {
+  //   let num = Math.floor((Math.random() * 10) + 1);
+  //   return num;
+  //   console.log(num)
+  // },[addTodo]);
   const onDone = (item) => {
     let newList = list.map(ListItem => {
-      if (ListItem.name === item.name) {
+      if (ListItem.id === item.id) {
         return {...ListItem, completed:!ListItem.completed}
       }
       return ListItem;
@@ -31,7 +37,7 @@ function App() {
 
   const onDelete = item => {
     let newList = list.filter(ListItem => {
-      if (ListItem.name === item.name) {
+      if (ListItem.id === item.id) {
         return false;
       }
       return true;
