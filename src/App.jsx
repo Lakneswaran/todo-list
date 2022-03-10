@@ -7,6 +7,9 @@ function App() {
   const updateToName = (e) => {
     setTodoName(e.target.value);
   }
+  const addTodo = () => {
+    console.log(todoName)
+  };
   return (
    <>
       <div>
@@ -17,6 +20,8 @@ function App() {
           value={todoName}
           onChange={updateToName}
         />
+        <button onClick={addTodo}>Add todo</button>
+
       </div>
    </>
   );
