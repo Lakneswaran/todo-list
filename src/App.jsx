@@ -5,12 +5,17 @@ import ListItem from './todo/ListItem';
 function App() {
 
   const [todoName, setTodoName] = useState("");
-  const [list, setList] = useState(["React Native", "Redux"]);
+  const [list, setList] = useState([]);
   const updateToName = (e) => {
     setTodoName(e.target.value);
   }
   const addTodo = () => {
-    setList([...list, todoName]);
+    setList([...list,
+      {
+        name: todoName,
+        completed: false,
+      }
+    ]);
     setTodoName("");
     console.log(todoName)
   };
@@ -27,7 +32,7 @@ function App() {
         <button onClick={addTodo}>Add todo</button>
 
         {
-          list.map(item => <ListItem name={item}/>) 
+          list.map(item => <ListItem obj={item}/>) 
         }
 
       </div>
