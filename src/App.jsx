@@ -13,12 +13,32 @@ function App() {
     setList([...list,
       {
         name: todoName,
-        completed: false,
+        completed: false
       }
     ]);
     setTodoName("");
-    console.log(todoName)
   };
+  const onDone = (item) => {
+    let newList = list.map(ListItem => {
+      if (ListItem.name === item.name) {
+        return {...ListItem, completed:!ListItem.completed}
+      }
+      return ListItem;
+    });
+    setList(newList);
+    console.log(item)
+  }
+
+  const onDelete = item => {
+    let newList = list.filter(ListItem => {
+      if (ListItem.name === item.name) {
+        return false;
+      }
+      return true;
+    });
+    setList(newList);
+    console.log(item)
+  }
   return (
    <>
       <div>
@@ -29,10 +49,10 @@ function App() {
           value={todoName}
           onChange={updateToName}
         />
-        <button onClick={addTodo}>Add todo</button>
+        <button className="border-blue-500 border bg-blue-300 hover:bg-blue-800" onClick={addTodo}>Add todo</button>
 
         {
-          list.map(item => <ListItem obj={item}/>) 
+          list.map(item => <ListItem obj={item} onDone={onDone} onDelete={onDelete} />) 
         }
 
       </div>
