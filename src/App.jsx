@@ -11,6 +11,7 @@ function App() {
   }
   const addTodo = () => {
     setList([...list, todoName]);
+    setTodoName("");
     console.log(todoName)
   };
   return (
