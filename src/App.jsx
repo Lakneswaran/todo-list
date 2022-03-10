@@ -1,9 +1,11 @@
 import './App.css';
 import { useState } from 'react';
+import ListItem from './todo/ListItem';
 
 function App() {
 
   const [todoName, setTodoName] = useState("");
+  const [list, setList] = useState(["React Native", "Redux"]);
   const updateToName = (e) => {
     setTodoName(e.target.value);
   }
@@ -21,6 +23,10 @@ function App() {
           onChange={updateToName}
         />
         <button onClick={addTodo}>Add todo</button>
+
+        {
+          list.map(item => <ListItem name={item}/>) 
+        }
 
       </div>
    </>
