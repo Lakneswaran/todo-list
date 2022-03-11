@@ -1,11 +1,11 @@
 import './App.css';
-import { useState } from 'react';
 import ListItem from './todo/ListItem';
+import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
 
-  const [todoName, setTodoName] = useState("");
-  const [list, setList] = useState([]);
+  const [todoName, setTodoName] = useLocalStorage("todoName","");
+  const [list, setList] = useLocalStorage("list",[]);
   const updateToName = (e) => {
     setTodoName(e.target.value);
   }
