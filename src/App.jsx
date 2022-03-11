@@ -50,7 +50,7 @@ function App() {
   }
   return (
    <>
-      <div>
+      <div class="flex flex-col bg-white rounded-lg p-6">
         <h3 className="border-blue-500 border bg-blue-300 hover:bg-blue-800">Todo list</h3>
         <input
           type="text"
@@ -58,7 +58,7 @@ function App() {
           value={todoName}
           onChange={updateToName}
         />
-        <button className="border-blue-500 border bg-blue-300 hover:bg-blue-800" onClick={addTodo}>Add todo</button>
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={addTodo}>Add todo</button>
 
         {
           list.map(item => <ListItem obj={item} onDone={onDone} onDelete={onDelete} />) 

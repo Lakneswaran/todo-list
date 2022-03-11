@@ -26,6 +26,10 @@
 ## React useLocalStorage
 
 - https://usehooks.com/page/3
-- 
+
+![Probs classcomp](public/asset/Storage_working.PNG)
+
+## Extend with Time and Date
+
 
 
