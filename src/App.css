@@ -1,0 +1,3 @@
+div.completed > p{
+    text-decoration: line-through;
+}
