@@ -50,7 +50,8 @@ function App() {
   }
   return (
    <>
-      <div class="grid grid-cols justify-items-center place-items-stretch bg-gray-200 h-100">
+    <div class=" grid grid-cols justify-items-center place-items-stretch bg-white-200 h-100">
+      <div class="bg-gray-200 h-100">
         <div class="text-gray-700 font-mono text-lg text-center bg-gray-400 px-4 py-2 m-2">
           <h3 className="border-gray-500 border bg-gray-300 hover:gray--800 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Todo list</h3>
           <input className="border-black-500 border bg-white-300 text-gray-800 font-bold py-2 px-4 rounded"
@@ -64,8 +65,8 @@ function App() {
             list.map(item => <ListItem obj={item} onDone={onDone} onDelete={onDelete} />) 
           }
         </div>
-
       </div>
+     </div> 
    </>
   );
 }
