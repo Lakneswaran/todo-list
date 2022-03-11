@@ -1,3 +1,5 @@
 div.completed > p{
     text-decoration: line-through;
+    text-transform: uppercase;
+    text-decoration-color: red ;
 }
