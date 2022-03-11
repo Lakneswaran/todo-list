@@ -2,6 +2,11 @@
 
 ## Explanation to use
 
+- Add what you want to do in todo list with add button.
+- it's saved in localStorage. 
+- You can mark it as done or delete it.
+- If you delete it, it will be gone while you refresh your browser.
+
 ## Explanation of code
 
 ## Learning purpose
