@@ -14,7 +14,7 @@
 ### JS Cookies vs local storage vs Session
 
 - Store data inside our browser. 
-- Loacl storage and Session Storage have lot of similarities rather than Cookies.
+- Local storage and Session Storage have lot of similarities rather than Cookies.
 - Data storage LS > CS only available to one tab. L -> we need to delete ourself, no timing. 
 - C> Browser and server, Sent with request 
 
